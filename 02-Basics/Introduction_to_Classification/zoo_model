@@ -1,0 +1,37 @@
+digraph Tree {
+node [shape=box, style="filled, rounded", color="black", fontname="helvetica"] ;
+edge [fontname="helvetica"] ;
+0 [label=<milk &le; 0.5<br/>gini = 0.755<br/>samples = 80<br/>value = [3, 16, 10, 6, 8, 33, 4]<br/>class = mammal>, fillcolor="#eacaf8"] ;
+1 [label=<feathers &le; 0.5<br/>gini = 0.782<br/>samples = 47<br/>value = [3, 16, 10, 6, 8, 0, 4]<br/>class = bird>, fillcolor="#f3fbdf"] ;
+0 -> 1 [labeldistance=2.5, labelangle=45, headlabel="True"] ;
+2 [label=<fins &le; 0.5<br/>gini = 0.766<br/>samples = 31<br/>value = [3, 0, 10, 6, 8, 0, 4]<br/>class = fish>, fillcolor="#eefdf0"] ;
+1 -> 2 ;
+3 [label=<backbone &le; 0.5<br/>gini = 0.717<br/>samples = 21<br/>value = [3, 0, 0, 6, 8, 0, 4]<br/>class = invertebrate>, fillcolor="#e5e8fc"] ;
+2 -> 3 ;
+4 [label=<predator &le; 0.5<br/>gini = 0.49<br/>samples = 14<br/>value = [0, 0, 0, 6, 8, 0, 0]<br/>class = invertebrate>, fillcolor="#ced5f8"] ;
+3 -> 4 ;
+5 [label=<legs &le; 3.0<br/>gini = 0.245<br/>samples = 7<br/>value = [0, 0, 0, 6, 1, 0, 0]<br/>class = insect>, fillcolor="#5ae9e7"] ;
+4 -> 5 ;
+6 [label=<gini = 0.0<br/>samples = 1<br/>value = [0, 0, 0, 0, 1, 0, 0]<br/>class = invertebrate>, fillcolor="#3956e5"] ;
+5 -> 6 ;
+7 [label=<gini = 0.0<br/>samples = 6<br/>value = [0, 0, 0, 6, 0, 0, 0]<br/>class = insect>, fillcolor="#39e5e2"] ;
+5 -> 7 ;
+8 [label=<gini = 0.0<br/>samples = 7<br/>value = [0, 0, 0, 0, 7, 0, 0]<br/>class = invertebrate>, fillcolor="#3956e5"] ;
+4 -> 8 ;
+9 [label=<aquatic &le; 0.5<br/>gini = 0.49<br/>samples = 7<br/>value = [3, 0, 0, 0, 0, 0, 4]<br/>class = reptile>, fillcolor="#f8cee1"] ;
+3 -> 9 ;
+10 [label=<gini = 0.0<br/>samples = 3<br/>value = [0, 0, 0, 0, 0, 0, 3]<br/>class = reptile>, fillcolor="#e53986"] ;
+9 -> 10 ;
+11 [label=<eggs &le; 0.5<br/>gini = 0.375<br/>samples = 4<br/>value = [3, 0, 0, 0, 0, 0, 1]<br/>class = amphibian>, fillcolor="#eeab7b"] ;
+9 -> 11 ;
+12 [label=<gini = 0.0<br/>samples = 1<br/>value = [0, 0, 0, 0, 0, 0, 1]<br/>class = reptile>, fillcolor="#e53986"] ;
+11 -> 12 ;
+13 [label=<gini = 0.0<br/>samples = 3<br/>value = [3, 0, 0, 0, 0, 0, 0]<br/>class = amphibian>, fillcolor="#e58139"] ;
+11 -> 13 ;
+14 [label=<gini = 0.0<br/>samples = 10<br/>value = [0, 0, 10, 0, 0, 0, 0]<br/>class = fish>, fillcolor="#39e54d"] ;
+2 -> 14 ;
+15 [label=<gini = 0.0<br/>samples = 16<br/>value = [0, 16, 0, 0, 0, 0, 0]<br/>class = bird>, fillcolor="#b7e539"] ;
+1 -> 15 ;
+16 [label=<gini = 0.0<br/>samples = 33<br/>value = [0, 0, 0, 0, 0, 33, 0]<br/>class = mammal>, fillcolor="#b139e5"] ;
+0 -> 16 [labeldistance=2.5, labelangle=-45, headlabel="False"] ;
+}
